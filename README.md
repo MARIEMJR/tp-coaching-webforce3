@@ -15,15 +15,18 @@ Mini-projet : Installer sur une VM (fournie), un serveur Web en Python Flask fon
 
 #Exercice 2 - Linux
 1-Mettre à jour les packages de votre VM ubuntu:
+
 ``
 sudo apt-get update
 sudo apt-get upgrade
 ``
 
 2-Vérifier la version de python3 déjà installée:
+
 `python3 --version : Python 3.8.10 `
 
 3-créer un alias nommé python valide pour le user ubuntu de votre VM:
+
   -Ouvrir le fichier .bashrc du user ubuntu:
   `sudo nano ~/.bashrc`
   Ajouter la ligne suivante au fichier :
@@ -44,37 +47,45 @@ Pour vérifier,utiliser :
 Si pip n'est pas installé, faire la commande suivante :
 
  ` sudo apt install pip`
+ 
 Vérifier si pip est bien installé et la version :
 
   `pip --version` 
+  
 Installer flask :
 
   ` pip install flask`
+  
 Vérifier si flask est bien installé et la version :
 
    `flask --version`
 #Exercice 3 - Storage
 1- Rechercher le disque supplémentaire de 1Gb connecté à la VM:
 
-Utiliser la commande suivante pour lister les disques et les partitions connectés au système, avec des informations telles que le nom du périphérique, le type de périphérique, la taille du périphérique, etc:
+Utiliser la commande suivante pour lister les disques et les partitions connectés au système :
+
 `sudo fdisk -l`
    
 Pour trouver directement le disque supplémentaire de 1Gb connecté à la VM utiliser la commande suivante:
 
    `sudo fdisk -l | grep "1 GiB"`
+   
 2- Formater le disque au format ext4
 
 Vérifier que le disque ne figure pas dans la liste des systèmes de fichiers montés, avec leur point de montage correspondant:
 
    `mount`
+   
  formater le disque au format ext4:
 
   `sudo mkfs -t ext4 /dev/vdc`
+  
 3- Monter (mount) ce disque sur le point montage /home/ubuntu/tp-coaching-webforce3/log :
 
 Créez le répertoire de point de montage avec la commande suivante :
 
-  sudo mkdir -p /home/ubuntu/tp-coaching-webforce3/log
+  `sudo mkdir -p /home/ubuntu/tp-coaching-webforce3/log`
+  
 Montez le disque sur le point de montage en utilisant la commande suivante :
 
   `sudo mount /dev/vdc /home/ubuntu/tp-coaching-webforce3/log`
