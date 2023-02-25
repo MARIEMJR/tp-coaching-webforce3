@@ -47,7 +47,7 @@ Pour vérifier,utiliser :
    
 4- Installer flask:
 
-Si pip n'est pas installé, faire la commande suivante :
+On doit installé le pip :
 
  ` sudo apt install pip`
  
@@ -89,7 +89,7 @@ Vérifier que le disque ne figure pas dans la liste des systèmes de fichiers mo
 
 Créez le répertoire de point de montage avec la commande suivante :
 
-  `sudo mkdir -p /home/ubuntu/tp-coaching-webforce3/log`
+  `sudo mkdir log`
   
 Montez le disque sur le point de montage en utilisant la commande suivante :
 
@@ -112,22 +112,47 @@ Créez un fichier blogs.py
  `nano blogs.py`
  
 le commenter:
-$python3
 
-from flask import Flask
-import logging
-#Configuration de l'app FLASK
- 
-app = Flask(__name__)
- 
-logging.basicConfig(filename='log/record.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
- 
-@app.route('/blogs')
-def blog():
-    app.logger.info('Info level log')
-    app.logger.warning('Warning level log')
-    return f"Welcome to the Blog"
- 
-app.run(host='localhost', debug=True)
+Ajouter une variable d'environnement FLASK_APP=blogs n utilisant la commande suivante :
+
+`export FLASK_APP=blogs.py`
+
+mettre cette variable dans le fichier ~/.bashrc de votre user ubuntu:
+
+` nano ~/.bashrc`
+
+Pour prendre en compte le changement fais sur le fichier :
+
+`source ~/.bashrc`
+
+Lancer le web server avec la commande :
+
+` flask run --host=0.0.0.0 -p 30101`
+
+Rajouter une condition manquante pour pouvoir lancer le web server:
+
+`if __name__ == '__main__'`
+
+Vérifier avec votre navigateur en utilisant l'url http://<ip_de_votre_vm>:30101/blogs:
+
+![image](https://user-images.githubusercontent.com/122799110/221377787-9ad82367-f049-46be-9dbe-0cd518edac6c.png)
+
+#Exercice 6 - Pare-feu
+
+Trouvez la commande de gestion du firewall sous ubuntu 20.04:
+`sudo ufw [option]`
+
+fermer le port 5000 en utilisant le commande:
+
+`sudo ufw deny 5000 `
+
+autoriser le port 30101:
+
+`sudo ufw allow 30101`
+Vérifier l'application Web sur ces ports par la commande:
+`netsate | grep "30101"`
+
+
+
 
 
