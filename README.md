@@ -112,8 +112,9 @@ Créez un fichier blogs.py
  `nano blogs.py`
  
 le commenter:
+$python3
 
-`from flask import Flask
+from flask import Flask
 import logging
 #Configuration de l'app FLASK
  
@@ -127,6 +128,6 @@ def blog():
     app.logger.warning('Warning level log')
     return f"Welcome to the Blog"
  
-app.run(host='localhost', debug=True)`
+app.run(host='localhost', debug=True)
 
 
