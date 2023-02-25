@@ -24,5 +24,8 @@ sudo apt-get upgrade
 `python3 --version : Python 3.8.10 `
 
 3-créer un alias nommé python valide pour le user ubuntu de votre VM:
+  -Ouvrir le fichier .bashrc du user ubuntu:
+  `sudo nano ~/.bashrc`
+  
 
 
