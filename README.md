@@ -14,6 +14,7 @@ Mini-projet : Installer sur une VM (fournie), un serveur Web en Python Flask fon
 ![image](https://user-images.githubusercontent.com/122799110/221375751-668a22c8-63ab-45d6-a0cb-36580aaf6208.png)
 
 #Exercice 2 - Linux
+
 1-Mettre à jour les packages de votre VM ubuntu:
 
 ``
@@ -29,6 +30,7 @@ sudo apt-get upgrade
 
   -Ouvrir le fichier .bashrc du user ubuntu:
   `sudo nano ~/.bashrc`
+  
   Ajouter la ligne suivante au fichier :
 
    `alias python='python3`
@@ -42,6 +44,7 @@ La commande "python" peut être utilisée pour exécuter le programme "python3" 
 Pour vérifier,utiliser :
 
    `python -V`
+   
 4- Installer flask:
 
 Si pip n'est pas installé, faire la commande suivante :
@@ -59,7 +62,9 @@ Installer flask :
 Vérifier si flask est bien installé et la version :
 
    `flask --version`
+   
 #Exercice 3 - Storage
+
 1- Rechercher le disque supplémentaire de 1Gb connecté à la VM:
 
 Utiliser la commande suivante pour lister les disques et les partitions connectés au système :
@@ -99,6 +104,7 @@ Montez le disque sur le point de montage en utilisant la commande suivante :
 4- Vous pouvez maintenant faire des git commit et git push depuis PyCharm
 
 #Exercice 5 - Python
+
 Créez un fichier blogs.py
 
  `nano blogs.py`
