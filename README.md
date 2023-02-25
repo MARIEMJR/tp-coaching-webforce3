@@ -94,7 +94,9 @@ Créez le répertoire de point de montage avec la commande suivante :
 Montez le disque sur le point de montage en utilisant la commande suivante :
 
   `sudo mount /dev/vdc /home/ubuntu/tp-coaching-webforce3/log`
+  
 #Exercice 4 - Git/Github
+
 1- Dans PyCharm allez dans File->Settings->Version control->github
 
 2- Appuyer sur la croix, en haut a gauche de cette fenetre et selectionnez log in with token.
@@ -108,6 +110,23 @@ Montez le disque sur le point de montage en utilisant la commande suivante :
 Créez un fichier blogs.py
 
  `nano blogs.py`
+ 
 le commenter:
+
+`from flask import Flask
+import logging
+#Configuration de l'app FLASK
+ 
+app = Flask(__name__)
+ 
+logging.basicConfig(filename='log/record.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
+ 
+@app.route('/blogs')
+def blog():
+    app.logger.info('Info level log')
+    app.logger.warning('Warning level log')
+    return f"Welcome to the Blog"
+ 
+app.run(host='localhost', debug=True)`
 
 
