@@ -26,14 +26,14 @@ sudo apt-get upgrade
 3-créer un alias nommé python valide pour le user ubuntu de votre VM:
   -Ouvrir le fichier .bashrc du user ubuntu:
   `sudo nano ~/.bashrc`
-  Ajouter la ligne suivante à la fin du fichier :
+  Ajouter la ligne suivante au fichier :
 
    `alias python='python3`
-Enregistrer et quitter le fichier avec "Ctrl+X", puis "Y" pour confirmer l'enregistrement, et "Entrée" pour quitter.
 
 Rechargez les modifications faites dans le fichier ~/.bashrc en tapant la commande suivante :
 
    `source ~/.bashrc`
+   
 La commande "python" peut être utilisée pour exécuter le programme "python3" sur la VM.
 
 Pour vérifier,utiliser :
