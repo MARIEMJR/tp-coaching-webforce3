@@ -14,6 +14,8 @@ Mini-projet : Installer sur une VM (fournie), un serveur Web en Python Flask fon
 ![image](https://user-images.githubusercontent.com/122799110/221375751-668a22c8-63ab-45d6-a0cb-36580aaf6208.png)
 
 #Exercice 2 - Linux
-1-Mettre à jour les packages de votre VM ubuntu
+1-Mettre à jour les packages de votre VM ubuntu:
 `sudo apt-get update`
 `sudo apt-get upgrade`
+2-Vérifier la version de python3 déjà installée:
+
