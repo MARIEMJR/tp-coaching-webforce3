@@ -113,6 +113,24 @@ Créez un fichier blogs.py
  
 le commenter:
 
+```python
+from flask import Flask
+import logging
+ # create the app
+ # app est une application Flask
+app = Flask(__name__)
+ #effecture la configuration de base du système du journalisation dans la fiche "log/record.log" 
+logging.basicConfig(filename='log/record.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
+ # application route, décorateur pour lier une fonction à une URL
+@app.route('/blogs')
+#creation de la fonction avec le nom blog qui retourne " Welcom to the Blog"
+def blog():
+    app.logger.info('Info level log')
+    app.logger.warning('Warning level log')
+    return f"Welcome to the Blog"
+ #l'exectuion de l'application en localhost
+app.run(host='localhost', debug=True)
+```
 Ajouter une variable d'environnement FLASK_APP=blogs n utilisant la commande suivante :
 
 `export FLASK_APP=blogs.py`
