@@ -59,7 +59,7 @@ Installer flask :
 
   ` pip install flask`
   
-Vérifier si flask est bien installé et la version :
+Vérifier si flask est bien installé :
 
    `flask --version`
    
@@ -79,7 +79,7 @@ Pour trouver directement le disque supplémentaire de 1Gb connecté à la VM uti
 
 Vérifier que le disque ne figure pas dans la liste des systèmes de fichiers montés, avec leur point de montage correspondant:
 
-   `mount`
+   `df -h`
    
  formater le disque au format ext4:
 
