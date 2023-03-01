@@ -13,7 +13,7 @@ Mini-projet : Installer sur une VM (fournie), un serveur Web en Python Flask fon
 5- Faire un screenshot
 ![image](https://user-images.githubusercontent.com/122799110/221375751-668a22c8-63ab-45d6-a0cb-36580aaf6208.png)
 
-#Exercice 2 - Linux
+# Exercice 2 - Linux
 
 1-Mettre à jour les packages de votre VM ubuntu:
 
@@ -63,7 +63,7 @@ Vérifier si flask est bien installé et la version :
 
    `flask --version`
    
-#Exercice 3 - Storage
+# Exercice 3 - Storage
 
 1- Rechercher le disque supplémentaire de 1Gb connecté à la VM:
 
@@ -95,7 +95,7 @@ Montez le disque sur le point de montage en utilisant la commande suivante :
 
   `sudo mount /dev/vdc /home/ubuntu/tp-coaching-webforce3/log`
   
-#Exercice 4 - Git/Github
+# Exercice 4 - Git/Github
 
 1- Dans PyCharm allez dans File->Settings->Version control->github
 
@@ -105,7 +105,7 @@ Montez le disque sur le point de montage en utilisant la commande suivante :
 
 4- Vous pouvez maintenant faire des git commit et git push depuis PyCharm
 
-#Exercice 5 - Python
+# Exercice 5 - Python
 
 Créez un fichier blogs.py
 
@@ -155,7 +155,7 @@ Vérifier avec votre navigateur en utilisant l'url http://<ip_de_votre_vm>:30101
 
 ![image](https://user-images.githubusercontent.com/122799110/221377787-9ad82367-f049-46be-9dbe-0cd518edac6c.png)
 
-#Exercice 6 - Pare-feu
+# Exercice 6 - Pare-feu
 
 Trouvez la commande de gestion du firewall sous ubuntu 20.04:
 `sudo ufw [option]`
