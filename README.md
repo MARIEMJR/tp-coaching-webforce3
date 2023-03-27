@@ -170,6 +170,55 @@ autoriser le port 30101:
 Vérifier l'application Web sur ces ports par la commande:
 `netsate | grep "30101"`
 
+# TP Ansible
+Mettre en place ansible dans votre VM, si ce n'est pas deja fait Nous allons créer un virtualenv python pour installer la derniere version d'Ansible
+`cd ~/tp-coaching-webforce3`
+
+`python3 -m venv venv  # set up the module venv in the directory venv
+
+`source venv/bin/activate`  # activate the virtualenv python
+
+`pip3 install wheel`  # set for permissions purpose
+
+`pip3 install --upgrade pip` # update pip3
+
+`pip3 install ansible` # install ansible 
+
+`pip3 install requests` # extra packages
+
+`pip3 install natsort `# require for an ansible filter
+
+`ansible --version `# check the version number`
+
+# TP ansible 1
+Créer un fichier ansible-1.yaml qui automatise l'exercice 2 ci-dessus.
+
+1-Le script doit mettre à jour les packages ubuntu.
+2-Vérifier la version de python3
+3-Créer un alias dans ~/.bashrc
+4-installer le package pip Testez votre script, il doit etre idempotent
+```
+---
+- name: Playbook exercice 1 ansible
+  hosts: localhost
+  become: true
+  tasks:
+   - name: Mise à jour les packages ubuntu
+     ansible.builtin.apt:
+             #name: update
+      update_cache: yes
+      upgrade: dist
+
+   - name: vérifier la version de python3
+     ansible.builtin.command:
+      cmd: python3 --version
+
+   - name: Créer un alias
+     ansible.builtin.lineinfile:
+      dest: ~/.bashrc
+      line: 'alias python="python3"'
+```
+
 
 
 
